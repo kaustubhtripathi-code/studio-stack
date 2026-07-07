@@ -106,6 +106,15 @@
   .pop{position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:var(--snap); color:#fff; font-size:11px; font-weight:700; padding:4px 12px; border-radius:999px; letter-spacing:.04em}
   .enterprise{margin-top:20px; text-align:center; color:var(--muted); font-size:14px}
   .enterprise a{color:var(--snap); font-weight:600}
+  .freetools{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px; margin-top:34px; padding:24px 28px; border:1px solid var(--line); border-radius:16px; background:linear-gradient(90deg, rgba(10,132,255,.07), rgba(20,184,166,.07))}
+  .ft-tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--scribe); background:#14b8a61e; padding:5px 11px; border-radius:999px; margin-bottom:12px}
+  .ft-title{font:600 20px "Space Grotesk"; margin:0}
+  .ft-sub{color:var(--muted); font-size:14px; margin:6px 0 0; max-width:48ch}
+  .ft-cta{display:flex; gap:12px; flex-wrap:wrap}
+  .plans-head{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin:48px 0 10px}
+  .plans-head h3{font:600 20px "Space Grotesk"}
+  .plans-head .toggle{margin:0}
+  .ck{color:var(--snap); font-weight:800; font-size:13px; flex:0 0 auto; margin-top:1px}
 
   .final{padding:96px 0; text-align:center}
   .final h2{font-size:clamp(30px,4.4vw,52px); font-weight:700}
@@ -294,40 +303,45 @@
   <div class="wrap reveal">
     <div class="pricing-head">
       <p class="eyebrow">Pricing</p>
-      <h2 style="font-size:clamp(28px,3.8vw,44px);font-weight:700;margin-top:10px">One stack. Simple, honest pricing.</h2>
-      <p class="muted" style="margin-top:14px">Start free and keep the core forever. Upgrade when you want the full platform and voice control. Snapline and local ScribeGlass notes are always free.</p>
+      <h2 style="font-size:clamp(28px,3.8vw,44px);font-weight:700;margin-top:10px">Two are free. The platform is simple.</h2>
+      <p class="muted" style="margin-top:14px">Snapline and ScribeGlass Pro run entirely on your own machine — so they're free, forever, no account. FreelancerOS is the hosted platform that ties everything together, priced per plan.</p>
+    </div>
+
+    <!-- always-free on-device tools -->
+    <div class="freetools">
+      <div>
+        <span class="ft-tag">Free forever · no account</span>
+        <p class="ft-title"><b>Snapline</b> &nbsp;+&nbsp; <b>ScribeGlass Pro</b> <span class="muted" style="font-weight:400">(local)</span></p>
+        <p class="ft-sub">Native tools that run on your device — no server, no subscription. Download and go.</p>
+      </div>
+      <div class="ft-cta">
+        <a class="btn btn-ghost" href="#snapline">Download Snapline</a>
+        <a class="btn btn-ghost" href="#scribeglass">Try ScribeGlass</a>
+      </div>
+    </div>
+
+    <!-- paid platform plans -->
+    <div class="plans-head">
+      <h3>FreelancerOS platform plans</h3>
       <div class="toggle" id="billToggle">
         <button data-p="m" class="on">Monthly</button>
         <button data-p="a">Annual <span class="save">−20%</span></button>
       </div>
-      <p id="annualNote" class="muted" style="display:none;margin-top:12px;font-size:13px">Prices shown per month · billed yearly.</p>
     </div>
+    <p id="annualNote" class="muted" style="display:none;text-align:right;margin:-2px 0 6px;font-size:13px">Prices shown per month · billed yearly.</p>
 
     <div class="tiers">
-      <div class="tier">
-        <div class="name">Free</div>
-        <div class="price">$<span class="num" data-m="0" data-a="0">0</span><span class="suf">/forever</span></div>
-        <div class="desc">Everything a solo freelancer needs to get started.</div>
-        <ul>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Time tracking, invoices, CRM & kanban</li>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> <b>Snapline</b> screenshots (unlimited)</li>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> <b>ScribeGlass</b> local notes</li>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> 1 client portal</li>
-        </ul>
-        <a class="cta" href="#">Start free</a>
-      </div>
-
       <div class="tier featured">
         <span class="pop">MOST POPULAR</span>
         <div class="name">Pro</div>
         <div class="price">$<span class="num" data-m="12" data-a="10">12</span><span class="suf">/mo</span></div>
-        <div class="desc">The full platform, plus hands-free voice control.</div>
+        <div class="desc">The full platform for a solo freelancer, plus hands-free voice.</div>
         <ul>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Everything in Free</li>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Proposals, contracts, scheduling & payments</li>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> <b>JARVIS</b> voice agent + AI meeting summaries</li>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Workflows, tax estimation, accounting export</li>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Unlimited client portals</li>
+          <li><span class="ck">✓</span> Time tracking, invoices, CRM, proposals & contracts</li>
+          <li><span class="ck">✓</span> Scheduling, Stripe payments, kanban & workflows</li>
+          <li><span class="ck">✓</span> <b>JARVIS</b> voice agent + AI meeting summaries</li>
+          <li><span class="ck">✓</span> Tax estimation, accounting export, unlimited portals</li>
+          <li><span class="ck">✓</span> Snapline &amp; ScribeGlass built right in</li>
         </ul>
         <a class="cta" href="#">Start 14-day trial</a>
       </div>
@@ -337,15 +351,27 @@
         <div class="price">$<span class="num" data-m="29" data-a="23">29</span><span class="suf">/user·mo</span></div>
         <div class="desc">For small studios that share clients and work.</div>
         <ul>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Everything in Pro, per seat</li>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Shared clients, projects & workspaces</li>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Roles, permissions & admin controls</li>
-          <li><svg class="ok" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Priority support</li>
+          <li><span class="ck">✓</span> Everything in Pro, per seat</li>
+          <li><span class="ck">✓</span> Shared clients, projects & workspaces</li>
+          <li><span class="ck">✓</span> Roles, permissions & admin controls</li>
+          <li><span class="ck">✓</span> Priority support</li>
         </ul>
         <a class="cta" href="#">Start team trial</a>
       </div>
+
+      <div class="tier">
+        <div class="name">Enterprise</div>
+        <div class="price">Custom</div>
+        <div class="desc">For agencies with security and scale requirements.</div>
+        <ul>
+          <li><span class="ck">✓</span> SSO / SAML, on-prem or private cloud</li>
+          <li><span class="ck">✓</span> Custom data residency &amp; retention</li>
+          <li><span class="ck">✓</span> SLA + dedicated support</li>
+          <li><span class="ck">✓</span> Onboarding &amp; migration help</li>
+        </ul>
+        <a class="cta" href="#">Talk to us</a>
+      </div>
     </div>
-    <p class="enterprise">Need SSO, on-prem, or a custom rollout? <a href="#">Talk to us about Enterprise →</a></p>
   </div>
 </section>
 
@@ -353,7 +379,7 @@
 <section class="final">
   <div class="wrap reveal">
     <h2>Your whole practice,<br>in one quiet stack.</h2>
-    <p>Start with FreelancerOS free, add the companions when you need them. Local-first, yours to keep.</p>
+    <p>Grab the free tools — Snapline &amp; ScribeGlass — and add the FreelancerOS platform when you're ready. Local-first, yours to keep.</p>
     <div class="cta-row" style="justify-content:center">
       <a class="btn btn-primary" href="#pricing">Start free</a>
       <a class="btn btn-ghost" href="#snapline">Download Snapline</a>
