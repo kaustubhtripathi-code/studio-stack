@@ -70,6 +70,8 @@
   .snip{position:relative; border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:0 40px 90px -50px rgba(0,0,0,.95)}
   .snip img{display:block; width:100%; height:auto}
   .snip .tag{position:absolute; top:12px; left:12px; background:var(--snap); color:#fff; font-size:12px; font-weight:600; padding:5px 11px; border-radius:7px; display:flex; gap:7px; align-items:center}
+  .videowrap{max-width:840px; margin:38px auto 0; border:1px solid var(--line); border-radius:16px; overflow:hidden; background:#000; box-shadow:0 40px 90px -50px rgba(0,0,0,.95)}
+  .videowrap video{display:block; width:100%; height:auto}
 
   .grid4{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:36px}
   .cardlet{border:1px solid var(--line); border-radius:14px; background:var(--card); padding:20px}
@@ -131,6 +133,7 @@
     <nav>
       <a href="#freelanceros">FreelancerOS</a>
       <a href="#snapline">Snapline</a>
+      <a href="#watch">Demo</a>
       <a href="#scribeglass">ScribeGlass</a>
       <a href="#jarvis">JARVIS</a>
       <a href="#pricing">Pricing</a>
@@ -199,6 +202,21 @@
     <div class="snip">
       <span class="tag">◳ Snapline capture</span>
       <img src="assets/snapline-shot.png" alt="A FreelancerOS screen captured and annotated with Snapline — a red box, arrow and note" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- WATCH / DEMO VIDEO -->
+<section id="watch" class="band">
+  <div class="wrap reveal" style="text-align:center">
+    <p class="eyebrow">See it in action</p>
+    <h2 style="font-size:clamp(28px,3.8vw,44px);font-weight:700;margin-top:10px">Snip, annotate, copy — in 30 seconds.</h2>
+    <p class="muted" style="max-width:54ch;margin:14px auto 0">Watch Snapline turn a single Ctrl&nbsp;+&nbsp;Alt&nbsp;+&nbsp;S press into an annotated screenshot on your clipboard.</p>
+    <div class="videowrap">
+      <video controls preload="metadata" poster="assets/snapline-poster.jpg" playsinline>
+        <source src="assets/snapline-demo.mp4" type="video/mp4">
+        Your browser doesn't support embedded video. <a href="assets/snapline-demo.mp4">Download the demo</a>.
+      </video>
     </div>
   </div>
 </section>
